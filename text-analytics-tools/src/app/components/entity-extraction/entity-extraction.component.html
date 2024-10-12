@@ -1,0 +1,48 @@
+<div class="entity-extraction-container">
+  <h3 class="title">Entity Extraction</h3>
+
+  <!-- Checkboxes -->
+  <label class="section-label">Include:</label>
+  <div class="checkbox-group">
+    <div class="form-check">
+      <input [(ngModel)]="abstract" class="form-check-input" type="checkbox" id="abstractOption">
+      <label for="abstractOption">Abstract</label>
+    </div>
+    <div class="form-check">
+      <input [(ngModel)]="categories" class="form-check-input" type="checkbox" id="categoriesOption">
+      <label for="categoriesOption">Categories</label>
+    </div>
+    <div class="form-check">
+      <input [(ngModel)]="image" class="form-check-input" type="checkbox" id="imageOption">
+      <label for="imageOption">Image</label>
+    </div>
+  </div>
+
+  <!-- Slider -->
+  <label for="confidenceSlider">Confidence</label>
+  <div class="slider-container">
+    <input [(ngModel)]="minConfidence" type="range" id="confidenceSlider" class="rangeinput" max="1.0" step="0.01" min="0.0">
+    <output>{{ minConfidence }}</output>
+  </div>
+
+  <!-- Input -->
+  <form [formGroup]="form" (submit)="extractEntities()" class="entity-form">
+    <div class="form-group">
+      <label for="textInput"><strong>Text</strong></label>
+      <textarea id="textInput" class="form-control" placeholder="Enter your text" rows="4" [formControlName]="'text'"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+  </form>
+
+  <!-- Results -->
+  <div class="results-section">
+    <p><strong>The extracted entities are: </strong></p>
+    <div *ngFor="let entity of result" class="entity-result">
+      <p><strong>Title: </strong> {{ entity.title }}</p>
+      <p *ngIf="entity.abstract"><strong>Abstract: </strong> {{ entity.abstract }}</p>
+      <p *ngIf="entity.categories"><strong>Categories: </strong> {{ entity.categories }}</p>
+      <p *ngIf="entity.image"><strong>Image: </strong> <img [src]="entity.image.thumbnail" alt="Entity Image"></p>
+      <hr>
+    </div>
+  </div>
+</div>

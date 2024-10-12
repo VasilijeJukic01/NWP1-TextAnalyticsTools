@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <div class="card shadow-sm p-4 token-settings-card">
+    <h3 class="mb-3 font-weight-bold">Token Settings</h3>
+    <form (submit)="setToken()" class="d-flex flex-column">
+      <div class="form-group mb-3">
+        <label for="token" class="form-label">Current Token: {{ savedToken }}</label>
+        <input type="text" class="form-control form-control-lg shadow-sm" id="token" name="token" placeholder="Enter your token" [(ngModel)]="token" aria-describedby="tokenHelp">
+        <small id="tokenHelp" class="form-text text-muted">Your token is a unique identifier for the session.</small>
+      </div>
+      <button type="submit" class="btn btn-primary submit-btn">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

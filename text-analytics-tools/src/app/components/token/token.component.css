@@ -1,0 +1,54 @@
+.token-settings-card {
+  background-color: #1e1e1e;
+  color: #ffffff; /* White text */
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.token-settings-card h3 {
+  color: #ffffff;
+}
+
+.form-label {
+  color: #ffffff;
+}
+
+.form-control {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #555;
+  border-radius: 8px;
+}
+
+.form-control:focus {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.form-text {
+  color: #cccccc;
+}
+
+#tokenHelp {
+  color: #cccccc !important;
+}
+
+
+.submit-btn {
+  background: linear-gradient(135deg, #4f93ff, #007bff);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: white;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #3f83ff, #006bff);
+}

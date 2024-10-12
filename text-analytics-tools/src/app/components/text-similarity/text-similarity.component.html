@@ -1,0 +1,21 @@
+<div class="text-similarity-container">
+  <h3 class="title">Text Similarity</h3>
+
+  <!-- Input -->
+  <form [formGroup]="form" (submit)="calculateSimilarity()" class="similarity-form">
+    <div class="form-group">
+      <label for="text1">Text 1</label>
+      <textarea class="form-control" id="text1" placeholder="Enter your first text" rows="4" [formControlName]="'text1'"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="text2">Text 2</label>
+      <textarea class="form-control" id="text2" placeholder="Enter your second text" rows="4" [formControlName]="'text2'"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+  </form>
+
+  <!-- Result -->
+  <div class="result-section mt-4">
+    <p><strong>Similarity is: </strong> <span class="similarity-value">{{ result }}%</span></p>
+  </div>
+</div>

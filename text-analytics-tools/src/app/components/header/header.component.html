@@ -1,0 +1,25 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 bg-white rounded">
+    <div class="container-fluid">
+      <a [routerLink]="'/'" class="navbar-brand fw-bold fs-4">Text Analytics Tools</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a [routerLink]="'/'" class="nav-link" aria-current="page">Entity Extraction</a>
+          <a [routerLink]="'/textSimilarity'" class="nav-link">Text Similarity</a>
+          <a [routerLink]="'/languageDetection'" class="nav-link">Language Detection</a>
+          <a [routerLink]="'/sentimentAnalysis'" class="nav-link">Sentiment Analysis</a>
+        </div>
+        <div class="navbar-nav">
+          <a [routerLink]="'/token'" class="nav-link">Token Settings</a>
+          <a [routerLink]="'/history'" class="nav-link">History</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container pt-3">
+  <router-outlet></router-outlet>
+</div>
