@@ -1,0 +1,15 @@
+<div class="history-page-container">
+  <h1 class="page-title">API Call History</h1>
+  <p class="page-description">Your recent API calls are shown below:</p>
+
+  <div class="api-calls-log-container">
+    <div *ngFor="let item of apiCalls; let i = index;" class="item-entry">
+      <p class="item-content">
+        <span class="item-index">{{ i + 1 }}. </span>
+        <span class="item-date-time">[{{item.date}} {{item.time}}]</span>
+        <span class="item-method"> {{ item.method }}</span>
+        <span class="item-url">{{ item.url }}</span>
+      </p>
+    </div>
+  </div>
+</div>

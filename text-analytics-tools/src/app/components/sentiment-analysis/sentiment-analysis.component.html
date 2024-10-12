@@ -1,0 +1,28 @@
+<div class="sentiment-analysis-container">
+  <h3 class="title">Sentiment Analysis</h3>
+
+  <!-- Language -->
+  <div class="form-group">
+    <label for="languageSelection">Language Selection</label>
+    <select [(ngModel)]="language" class="form-control" id="languageSelection">
+      <option>auto</option>
+      <option>en</option>
+      <option>it</option>
+    </select>
+  </div>
+
+  <!-- Input -->
+  <form [formGroup]="form" (submit)="analyseSentiment()" class="sentiment-form">
+    <div class="form-group">
+      <label for="text">Text</label>
+      <textarea class="form-control" id="text" placeholder="Enter your text" rows="4" [formControlName]="'text'"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+  </form>
+
+  <!-- Result -->
+  <div class="result-section mt-4">
+    <p><strong>Sentiment score is: </strong> <span class="sentiment-score">{{ result.score.toFixed(2) }}</span></p>
+    <p><strong>Sentiment type is: </strong> <span [style.color]="color">{{ result.type }}</span></p>
+  </div>
+</div>

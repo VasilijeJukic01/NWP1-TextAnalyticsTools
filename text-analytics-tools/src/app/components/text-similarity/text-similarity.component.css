@@ -1,0 +1,62 @@
+.text-similarity-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+textarea:focus {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #007bff;
+  outline: none;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.similarity-form .form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+.result-section {
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.similarity-value {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffffff;
+}

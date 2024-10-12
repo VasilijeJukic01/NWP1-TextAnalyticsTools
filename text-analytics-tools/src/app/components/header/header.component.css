@@ -1,0 +1,29 @@
+.navbar {
+  background-color: #1e1e1e !important;
+  color: #ffffff;
+  border-radius: 0;
+}
+
+.nav-link {
+  color: #ffffff !important;
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.d-flex .text-muted {
+  color: #ffffff !important;
+}
+
+.nav-link:hover {
+  color: #bbbbbb !important;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+}
