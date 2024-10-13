@@ -22,6 +22,10 @@ textarea:focus {
   outline: none;
 }
 
+textarea::placeholder {
+  color: #969696;
+}
+
 .title {
   font-size: 1.5rem;
   margin-bottom: 20px;

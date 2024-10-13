@@ -29,6 +29,10 @@ textarea:focus {
   outline: none;
 }
 
+textarea::placeholder {
+  color: #969696;
+}
+
 .checkbox-group {
   display: flex;
   align-items: center;
