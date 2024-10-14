@@ -7,6 +7,7 @@ import { LanguageDetectionComponent } from "./components/language-detection/lang
 import { SentimentAnalysisComponent } from "./components/sentiment-analysis/sentiment-analysis.component";
 import { TokenComponent } from "./components/token/token.component";
 import { HistoryComponent } from "./components/history/history.component";
+import { AuthGuard } from './guards/auth.guard';
 
 const components = {
   entityExtraction: EntityExtractionComponent,
@@ -19,12 +20,12 @@ const components = {
 
 const routes: Routes = [
   { path: "",                   redirectTo: "/entityExtraction", pathMatch: "full" },
-  { path: "entityExtraction",   component: components.entityExtraction },
-  { path: "textSimilarity",     component: components.textSimilarity },
-  { path: "languageDetection",  component: components.languageDetection },
-  { path: "sentimentAnalysis",  component: components.sentimentAnalysis },
+  { path: "entityExtraction",   component: components.entityExtraction,   canActivate: [AuthGuard] },
+  { path: "textSimilarity",     component: components.textSimilarity,     canActivate: [AuthGuard] },
+  { path: "languageDetection",  component: components.languageDetection,  canActivate: [AuthGuard] },
+  { path: "sentimentAnalysis",  component: components.sentimentAnalysis,  canActivate: [AuthGuard] },
   { path: "token",              component: components.token },
-  { path: "history",            component: components.history }
+  { path: "history",            component: components.history,            canActivate: [AuthGuard] }
 ];
 
 @NgModule({

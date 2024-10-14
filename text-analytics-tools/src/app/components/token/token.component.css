@@ -5,6 +5,10 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
+input::placeholder {
+  color: #969696;
+}
+
 .token-settings-card h3 {
   color: #ffffff;
 }
